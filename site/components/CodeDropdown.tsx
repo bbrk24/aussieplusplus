@@ -5,12 +5,7 @@ import React, { Fragment, useState } from 'react'
 
 import { examples } from '../lib/example'
 
-const exampleList = [
-  'dreamtime.aussie',
-  'fibonacci.aussie',
-  'time.aussie',
-  'random_beer.aussie'
-]
+const exampleList = Object.keys(examples).map(el => el + '.aussie')
 
 const getExample = (name: string) => {
   return examples[name.split('.')[0]]
